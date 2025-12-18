@@ -1,0 +1,1 @@
+ALTER TABLE livetv_channles RENAME TO livetv_channels;

@@ -1,0 +1,1 @@
+ALTER TABLE livetv_channles ADD COLUMN user_id TEXT NOT NULL;

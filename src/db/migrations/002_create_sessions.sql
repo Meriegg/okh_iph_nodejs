@@ -1,0 +1,10 @@
+CREATE TABLE IF NOT EXISTS user_sessions (
+  id TEXT PRIMARY KEY NOT NULL,
+  user_id TEXT NOT NULL,
+
+  sessionHash TEXT NOT NULL UNIQUE,
+
+  created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+  expires_at TIMESTAMP NOT NULL,
+  edited_at TIMESTAMP
+);
