@@ -54,3 +54,58 @@ export type TLiveTvChannel = {
   createdAt: Date;
   userId: string;
 }
+
+export type TMatch = {
+  id: string;
+
+  slug: string;
+
+  league: string;
+  league_image: string;
+  league_country: string;
+  league_slug: string;
+  league_id: string | null;
+
+  sport: string;
+  sport_slug: string;
+
+  team1: string;
+  team1_image: string;
+
+  team2: string;
+  team2_image: string;
+
+  venue: string | null;
+
+  timestamp: number;
+  duration: number;
+
+  timeStr?: string;
+  dateStr?: string;
+
+  ltTimestamp?: number;
+  stTimestamp?: number;
+
+  external_id: string;
+}
+
+export type TUserLink = {
+  id: string;
+  user_id: string;
+  match_id: string;
+
+  name: string;
+  link: string;
+  type: "embed" | "popup" | "normal";
+
+  country: string;
+  language: string;
+
+  quality: string | null;
+  bitrate: string | null;
+  MISR: string | null;
+  adsNumber: number | null;
+
+  created_at: Date;
+  updated_at: Date | null;
+}

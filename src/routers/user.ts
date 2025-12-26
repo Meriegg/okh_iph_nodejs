@@ -8,7 +8,7 @@ export const userRouter = Router();
 
 userRouter.get("/me", (_, res) => {
   return res.json({ session: res.locals.session, user: res.locals.user });
-});
+}); // works
 
 userRouter.post("/log-out", async (_, res) => {
   db.prepare("DELETE FROM user_sessions WHERE id = ?").run(res.locals.session?.id);
@@ -16,7 +16,7 @@ userRouter.post("/log-out", async (_, res) => {
   res.clearCookie("session_token");
 
   return res.status(200).json({ message: "Logged out successfully." });
-});
+}); // works
 
 userRouter.post("/change-password", async (req, res) => {
   try {
@@ -80,5 +80,5 @@ userRouter.post("/change-password", async (req, res) => {
 
     return res.status(500).json({ message: "Unable to log in, please try again later." });
   }
-})
+}); // works
 
